@@ -2,11 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bignerdranch.android.criminalintent">
 
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_criminalintent"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_criminalintent"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CrimeListActivity">
@@ -17,7 +21,21 @@
             </intent-filter>
         </activity>
         <activity android:name=".CrimeActivity" />
-        <activity android:name=".CrimePagerActivity"></activity>
+
+        <activity
+            android:name=".CrimePagerActivity"
+            android:parentActivityName=".CrimeListActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bignerdranch.android.criminalintent.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files" />
+        </provider>
+
     </application>
 
 </manifest>
