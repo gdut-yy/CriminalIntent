@@ -1,9 +1,13 @@
 # CriminalIntent（Android 应用）
 
-![](Readme/ic_criminalintent.png)
+![](readme/ic_criminalintent.png)
 
 《Android 编程权威指南（第 3 版）》书中最为复杂的应用，用来记录办公室同事的种种陋习。借此应用学习 fragment、主从用户界面、list-backed 用户界面、菜单选项、相机调用、隐式 intent 等内容。
 （Chapter 7 - Chapter 19）
+
+## 应用截图
+
+![](readme/criminalintent_1.png) ![](readme/criminalintent_2.png)
 
 ## 涉及技术
 
